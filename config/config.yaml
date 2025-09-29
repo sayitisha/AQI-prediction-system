@@ -1,0 +1,75 @@
+# AQI Prediction Project Configuration
+
+# Data settings
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  external_dir: data/external
+  
+  # List of cities to include in the analysis
+  cities:
+    - Delhi
+    - Mumbai
+    - Bangalore
+    - Kolkata
+    - Chennai
+    - Hyderabad
+    - Pune
+    - Lucknow
+    - Ahmedabad
+    - Chandigarh
+    - Jaipur
+    - Surat
+    - Patna
+    - Kochi
+    - Bhopal
+  
+  # Date range for data collection
+  date_range:
+    start_year: 2020
+    end_year: 2024
+  
+  # Pollutants to include in the analysis
+  pollutants:
+    - PM2.5
+    - PM10
+    - NO2
+    - SO2
+    - CO
+    - O3
+
+# Model settings
+models:
+  random_forest:
+    n_estimators: 100
+    max_depth: null
+    min_samples_split: 2
+    min_samples_leaf: 1
+    random_state: 42
+  
+  xgboost:
+    n_estimators: 100
+    learning_rate: 0.1
+    max_depth: 5
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+  
+  # Train-test split settings
+  train_test_split:
+    test_size: 0.2
+    random_state: 42
+  
+  # Feature engineering settings
+  features:
+    create_lag_features: true
+    lag_periods: [1, 3, 6, 12, 24]
+    create_rolling_features: true
+    rolling_windows: [3, 6, 12, 24]
+    create_cyclical_features: true
+
+# Visualization settings
+visualization:
+  figures_dir: reports/figures
+  color_palette: YlOrRd
+  interactive_dashboard: true
