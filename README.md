@@ -206,7 +206,7 @@ This project can be applied in various domains:
 
 ## Creator
 
-Created by Akash Deep Sahu (https://github.com/Akashdeepbt22) based on datasets provided by the Central Pollution Control Board (CPCB) of India.
+Created by Itisha Kumari  (https://github.com/sayitisha) based on datasets provided by the Central Pollution Control Board (CPCB) of India.
 
 ## License
 
