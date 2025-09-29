@@ -1,0 +1,55 @@
+from setuptools import find_packages, setup
+
+setup(
+    name="aqi_prediction",
+    version="0.1.0",
+    description="Air Quality Index Prediction for Indian Cities",
+    author="AayuShen",
+    url="https://github.com/AayuShen/AQI-Prediction",
+    packages=find_packages(),
+    install_requires=[
+        # Core data processing and analysis
+        "numpy>=1.24.0",
+        "pandas>=2.0.0",
+        
+        # Visualization
+        "matplotlib>=3.7.0",
+        "seaborn>=0.12.0",
+        "plotly>=5.13.0",
+        
+        # Machine Learning
+        "scikit-learn>=1.0.0",
+        "xgboost>=1.7.0",
+        "tensorflow>=2.12.0",
+        "keras>=2.12.0",
+        
+        # Time Series Analysis
+        "prophet>=1.1.0",
+        "statsmodels>=0.13.0",
+        
+        # Data Collection
+        "requests>=2.28.0",
+        "beautifulsoup4>=4.11.0",
+        
+        # Utilities
+        "python-dateutil>=2.8.2",
+        "tqdm>=4.65.0",
+        "joblib>=1.2.0",
+        
+        # Model Interpretation
+        "shap>=0.41.0",
+    ],
+    python_requires=">=3.8",
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Topic :: Scientific/Engineering :: Atmospheric Science",
+    ],
+    keywords="air quality, prediction, machine learning, time series, india",
+)
